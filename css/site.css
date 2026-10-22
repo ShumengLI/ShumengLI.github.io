@@ -1,7 +1,4 @@
-/* Local overrides; no remote fonts or runtime CDN dependencies. */
-html, .navbar-light, h1, h2, h3, h4, h5, h6, .section-subheading {
-  font-family: Arial, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
-}
+/* Local enhancements; typography is defined by the original theme. */
 section[id], .view-list-item[id] { scroll-margin-top: 90px; }
 .publication-title { color: #224b8d; }
 .dark .publication-title { color: #bbdefb; }
