@@ -1,3 +1,4 @@
 User-agent: *
+Allow: /
 
-Sitemap: https://ShumengLI.github.io/sitemap.xml
+Sitemap: https://shumengli.github.io/sitemap.xml
