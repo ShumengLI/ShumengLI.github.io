@@ -2,6 +2,11 @@
 section[id], .view-list-item[id] { scroll-margin-top: 90px; }
 .publication-title { color: #224b8d; }
 .dark .publication-title { color: #bbdefb; }
+/* Keep publication details together and separate individual entries. */
+#publications .article-metadata { margin-top: .25rem; }
+#publications .article-metadata > br:first-child { display: none; }
+#publications .view-list-item { margin-bottom: 1.5rem; }
+#publications .view-list-item:last-child { margin-bottom: 0; }
 .search-hit { margin: 1.5rem 0; }
 .search-hit p { font-size: .85rem; }
 .search-hit a { font-weight: 700; }
