@@ -1,40 +1,33 @@
-# Shumeng Li — personal homepage
+# Shumeng Li — Personal Homepage
 
-This repository is a directly deployable static website. It has no npm dependencies, Hugo build step, external JavaScript, external fonts, or CDN assets. The existing layout CSS and Font Awesome fonts retain their upstream license notices.
+Personal academic website featuring research interests, publications, education, and experience.
 
-## Preview and edit
+**Website:** [shumengli.github.io](https://shumengli.github.io/)
 
-Run from this directory:
+## Local preview
+
+Run the following command from the repository root:
 
 ```sh
 python3 -m http.server 8765 --bind 127.0.0.1
 ```
 
-Open http://127.0.0.1:8765/ in a browser. Use an HTTP server rather than opening the HTML as a local file because asset URLs begin with `/`.
+Open [localhost:8765](http://localhost:8765/) in your browser.
 
-- `index.html`: profile, publications, book, experience, contact details.
-- `css/theme.css`: existing Wowchemy/Bootstrap layout and theme.
-- `css/icons.css` and `webfonts/`: existing local Font Awesome icons.
-- `css/site.css`: small local style overrides and system font stack.
-- `js/site.js`: mobile menu, theme selection, navigation state and search.
-- `authors/admin/shumengli.jpg`: optimized portrait.
-- `media/`: local logos and working application icons.
-- `404.html`, `manifest.webmanifest`, `robots.txt`, `sitemap.xml`: static site metadata.
+## Project structure
 
-Search reads the visible page content, including publication authors and titles. When adding a publication, give its `.view-list-item` a unique `id` and `data-searchable` attribute. No generated search index needs to be updated. Titles without a known paper URL use a `.publication-title` span rather than a placeholder homepage link.
+- `index.html` — homepage content.
+- `css/` — layout, theme, and icon styles.
+- `js/site.js` — navigation, search, and theme switching.
+- `authors/` and `media/` — portrait, logos, and site icons.
+- `webfonts/` — local icon fonts.
+- `404.html` — page-not-found screen.
+- `manifest.webmanifest`, `robots.txt`, and `sitemap.xml` — site metadata.
 
-The existing A*STAR experience dates read “Jul 2021 – Jan 2021”. They were preserved along with all other profile and publication text; confirm the intended dates before changing them.
+## Deployment
 
-## GitHub Pages deployment
+The website is hosted on GitHub Pages from the root of the `main` branch. No build step is required.
 
-This site is published from the root of the `main` branch of `ShumengLI/ShumengLI.github.io`. The `.nojekyll` file enables plain static hosting. When synchronizing an updated copy, remove retired files as well as adding changed files so obsolete template pages are no longer served.
+## Credits
 
-## Maintenance notes
-
-The website retains all six homepage sections and 13 publication entries. Runtime assets are served locally. Search indexes the visible content; no generated search index is needed. The legacy example projects, robot research pages, Netlify admin integration, external runtime dependencies and unused JavaScript bundles have been removed.
-
-Original photographs and logos were resized for their display dimensions. The existing Wowchemy layout and local Font Awesome assets retain their license notices. Fonts use the system font stack.
-
-## Validation
-
-Checked in Chrome at desktop (1440 px) and mobile (390 px) widths with external resource requests blocked: content preservation, publication links and anchors, local assets, search, theme selection and persistence, mobile navigation, application icons, the 404 page, and readable content with JavaScript disabled.
+Layout styles are based on Wowchemy and Bootstrap. Icons use Font Awesome. Upstream license notices are retained in the corresponding asset files.
